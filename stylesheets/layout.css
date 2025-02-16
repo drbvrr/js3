@@ -1,46 +1,72 @@
+*{ box-sizing: border-box;}
+
+@font-face {
+font-family: "CarlaSansLight";
+src: url("../fonts/CarlaSansLight.ttf") format("truetype");
+font-style: Light;
+font-weight: Light;
+}
+
+p{ font-family: 'CarlaSansLight'; }
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 50vw;
-    background: #333;
+    height: 100vh;
+    background: rgb(204, 204, 204);
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    gap: 20px;
 }
-  
-.glass {
+
+
+.glassmorphism {
     background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
     padding: 15px 30px;
-    margin: 5%;
-    font-size: 16px;
-    color: white;
-    transition: 0.3s;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
     cursor: pointer;
+    transition: 0.3s;
 }
-  
-.glass:hover {
+
+.glassmorphism:hover {
     background: rgba(255, 255, 255, 0.3);
 }
 
-.neomorph {
+
+.neomorphism {
     background: #e0e0e0;
-    border: none;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 15px 30px;
-    margin: 5%;
-    font-size: 16px;
+    font-size: 18px;
     color: #333;
-    transition: 0.3s;
+    text-transform: uppercase;
     cursor: pointer;
+    border: none;
+    box-shadow: 8px 8px 16px #b8b8b8, -8px -8px 16px #ffffff;
+    transition: all 0.3s ease;
 }
-  
-.neomorph:active{
-    box-shadow: inset 6px 6px 12px #ada3a3, inset -6px -6px 12px #ffffff;
+
+.neomorphism:active {
+    box-shadow: inset 6px 6px 12px #b8b8b8, inset -6px -6px 12px #ffffff;
 }
-  
-.styled{
-    transition: background-color 0.3s ease, margin 0.3s ease;
+
+.clickbox {
     background-color: red;
-    margin: 5%;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    margin: 1vw;
+}
+
+.clickbox:hover {
+    transform: scale(1.05);
 }
