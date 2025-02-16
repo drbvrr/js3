@@ -1,14 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let box = document.querySelector(".box");
-    box.forEach(function(clickbox){
-        clickbox.addEventListener("click", function (){
-            if(clickbox.style.background === "blue");
-        });
+    let button = document.getElementById("interactiveButton");
+  
+    button.addEventListener("click", function () {
+      if (button.style.backgroundColor === "lightsteelblue") {
+        button.style.backgroundColor = "red";
+        button.style.margin = "2vw";
+      } else {
+        button.style.backgroundColor = "lightsteelblue";
+        button.style.margin = "1vw";
+      }
     });
-
-
-
-
-
-
-});
+  });
